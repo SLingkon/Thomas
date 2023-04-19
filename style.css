@@ -335,10 +335,7 @@ button.btn-2 {
     color: #A6B0C9;
 }
 
-.testi-slider {
-    display: flex;
-    flex-direction: column;
-}
+
 
 .slick-dots li button {
     width: 1rem;
@@ -400,6 +397,6 @@ button.btn-2 {
 
 
 
-.row{
+.row {
     display: grid;
 }
