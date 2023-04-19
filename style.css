@@ -428,14 +428,28 @@ button.btn-2 {
 }
 
 /* Footer CSS */
+.footer {
+    background-image: url(./footer-bg.png);
+    background-position: center;
+    background-size: cover;
+    padding-top: 310px;
 
+}
 
+.text p {
+    font-family: 'Aventa-SemiBold';
+    font-size: 20px;
+    line-height: 35px;
+    color: #FFFFFF;
+
+}
 
 .row-one {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-
     justify-items: end;
+    padding-bottom: 100px;
+    border-bottom: 1px solid #1B3C78;
 }
 
 .row-one .col {
@@ -445,9 +459,10 @@ button.btn-2 {
 }
 
 .col h4 {
-    font-family: 'Aventa-Black';
+    font-family: 'Aventa-Bold';
     font-size: 24px;
     line-height: 28px;
+    margin-bottom: 32px;
 }
 
 .col a {
@@ -455,5 +470,49 @@ button.btn-2 {
     font-size: 20px;
     line-height: 23px;
     text-transform: capitalize;
+    text-decoration: none;
+    color: #ffffff;
+    margin-bottom: 21px;
+}
 
+.row-two {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+}
+
+.icons img {
+    margin-right: 30px;
+}
+
+.copyright p {
+    padding-top: 30px;
+    text-align: center;
+    font-family: 'Aventa-SemiBold';
+    font-size: 20px;
+    line-height: 23px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+.copyright p span {
+    color: #136DF7;
+}
+
+.footer {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-shadow img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
 }
