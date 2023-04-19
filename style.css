@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #030B1C;
 }
@@ -193,20 +199,101 @@ button.btn-2 {
     transition: max-height 0.2s ease-out;
 }
 
+
 .accordianSec {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     margin-top: 55px;
+    grid-gap: 66px;
 }
 
-#accordion {
+
+/* #accordion {
     width: 100%;
+} */
+/* accor style  */
+.dl_accordion_item {
+    border-bottom: 1px solid #e5e5e5;
+
 }
 
-.explore-img {
-    margin-left: 66px;
+.dl_accordion_item:last-child {
+    border-bottom: 0px solid transparent;
 }
+
+.dl_accordion_item .dl_accordion_icon {
+    position: absolute;
+    left: -42px;
+    top: -4px;
+}
+
+.dl_accordion_item.is-active {
+    background-color: #fff;
+}
+
+.dl_accordion_item .dl_accordion_item_title {
+    position: relative;
+}
+
+.dl_accordion_item .dl_accordion_title {
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 0;
+    font-family: 'Aventa-SemiBold';
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+.dl_accordion_item .dl_accordion_title::before {
+    content: '';
+    display: inline-block;
+    height: 7px;
+    width: 7px;
+    vertical-align: middle;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    transform: rotate(45deg);
+    transition: transform 0.2s ease-out;
+    right: 6px;
+    top: 14%;
+    position: absolute;
+}
+
+.dl_accordion_item .dl_accordion_panel {
+    display: none;
+    padding-top: 30px;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Aventa-Medium';
+    font-size: 19px;
+    line-height: 40px;
+    /* or 211% */
+
+    text-transform: capitalize;
+
+    color: #09142E
+}
+
+.dl_accordion_item.is-active .dl_accordion_title::before {
+    transform: rotate(-140deg);
+}
+
+.dl_accordion_item.dl_accordion_style_02 {
+
+    border-bottom: 0px solid transparent;
+    background-color: #1B3C78;
+    margin-bottom: 10px;
+}
+
+.dl_accordion_item.dl_accordion_style_02 .dl_accordion_panel {
+    padding-top: 20px;
+}
+
+/* accor style  */
+
+
 
 .free-section {
     width: 100%;
