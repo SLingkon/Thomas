@@ -263,23 +263,30 @@ button.btn-2 {
     margin-bottom: 15px;
 }
 
+.list-title p {
+    font-family: 'Aventa-SemiBold';
+    font-size: 19px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #09142E;
+}
+
 .title h1 {
     font-family: 'Aventa-Bold';
     font-size: 48px;
     line-height: 81px;
-    /* identical to box height, or 169% */
-
     text-align: center;
     text-transform: capitalize;
     padding-bottom: 40px;
     color: #FFFFFF;
 }
 
-.testi-title {
+.testi-wrapper {
     margin-left: 155px;
 }
 
-.testi-title h1 {
+.testi-wrapper h1 {
     font-family: 'Aventa-Bold';
     font-size: 48px;
     line-height: 81px;
@@ -288,7 +295,7 @@ button.btn-2 {
     color: #FFFFFF;
 }
 
-.testi-title p {
+.slider-items p {
     font-family: 'Aventa-SemiBold';
     font-size: 24px;
     line-height: 39px;
@@ -300,4 +307,80 @@ button.btn-2 {
     display: flex;
     justify-content: space-between;
 
+}
+
+.client-info h2 {
+    font-family: 'Aventa-Bold';
+    font-size: 24px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-top: 30px;
+    margin-bottom: 8px;
+}
+
+.client-info h4 {
+    font-family: 'Aventa-Regular';
+    font-size: 14px;
+    line-height: 22px;
+    color: #A6B0C9;
+}
+
+.testi-slider {
+    display: flex;
+    flex-direction: column;
+}
+
+.slick-dots li button {
+    width: 1rem;
+    height: 1rem;
+    padding: 0;
+    border: none;
+    border-radius: 100%;
+    background-color: #136DF7;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+.slick-dots .slick-active {
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid #136DF7;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    margin: 0px 5px;
+    cursor: pointer;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 1rem 0;
+    list-style: none;
+}
+
+.icons-slider .slick-track {
+    display: flex;
+    align-items: center;
+}
+
+.icon-item img {
+    width: 80%;
+    object-fit: contain;
+}
+
+.icon-item.slick-slide {
+    display: grid;
+    margin: 0 10px;
+}
+
+.icon-item {
+    display: grid;
+    place-content: center;
+    place-items: center;
+    height: 96px;
+    border: 1px solid #136DF7;
+    border-radius: 5px;
 }

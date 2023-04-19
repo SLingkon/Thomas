@@ -19,7 +19,17 @@ $(function () {
 $(document).ready(function () {
 	$('.icons-slider').slick({
 		slidesToShow: 5,
-		slidesToScroll: 3,
+		slidesToScroll: 4,
+		autoplay: false,
+		dots: true,
+		arrows: false,
+	});
+});
+
+$(document).ready(function () {
+	$('.testi-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
 		autoplay: true,
 		dots: true,
 		arrows: false,
