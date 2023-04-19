@@ -74,7 +74,7 @@ button.btn-2 {
 }
 
 .herosection {
-    /* background-image: url('/bg1.png'); */
+    background-image: url('/bg1.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -211,6 +211,7 @@ button.btn-2 {
 .free-section {
     width: 100%;
     padding: 115px 0px;
+    background-image: url('./free-bg.png');
 }
 
 .text-container h1 {
@@ -282,8 +283,13 @@ button.btn-2 {
     color: #FFFFFF;
 }
 
+.testimonial {
+    padding: 150px 0px;
+}
+
 .testi-wrapper {
-    margin-left: 155px;
+    /* margin-left: 155px; */
+    width: 50%;
 }
 
 .testi-wrapper h1 {
@@ -301,6 +307,10 @@ button.btn-2 {
     line-height: 39px;
     color: rgba(255, 255, 255, 0.72);
     margin-bottom: 28px;
+}
+
+.ratings {
+    display: flex;
 }
 
 .content-wrapper {
@@ -373,14 +383,23 @@ button.btn-2 {
 
 .icon-item.slick-slide {
     display: grid;
-    margin: 0 10px;
+    margin: 0 20px;
 }
 
 .icon-item {
     display: grid;
     place-content: center;
     place-items: center;
+
     height: 96px;
     border: 1px solid #136DF7;
     border-radius: 5px;
+}
+
+/* Footer CSS */
+
+
+
+.row{
+    display: grid;
 }
