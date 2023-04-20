@@ -564,6 +564,15 @@ nav ul li {
     border-bottom: 1px solid #1B3C78;
 }
 
+.row-one .logo {
+    margin-bottom: 24px;
+    width: 43px;
+}
+
+.row-one .logo img {
+    width: 100%;
+}
+
 .row-one .col {
     color: white;
     display: flex;
