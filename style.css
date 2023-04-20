@@ -16,26 +16,26 @@ body {
 
 @font-face {
     font-family: Aventa-Regular;
-    src: url('./Font/Aventa-Regular.ttf');
+    src: url('./assets/Font/Aventa-Regular.ttf');
 }
 
 @font-face {
     font-family: Aventa-Semibold;
-    src: url('./Font/Aventa-SemiBold.ttf');
+    src: url('./assets/Font/Aventa-SemiBold.ttf');
 }
 
 @font-face {
     font-family: Aventa-Bold;
-    src: url('./Font/Aventa-Bold.ttf');
+    src: url('./assets/Font/Aventa-Bold.ttf');
 }
 
 @font-face {
     font-family: Aventa-ExtraBold;
-    src: url('./Font/Aventa-ExtraBold.ttf');
+    src: url('./assets/Font/Aventa-ExtraBold.ttf');
 }
 
 header {
-    width: 85%;
+    max-width: 1320px;
     height: 70px;
     margin: 0 auto;
     display: flex;
@@ -43,6 +43,9 @@ header {
     align-items: center;
     margin-bottom: -90px;
     margin-top: 20px;
+    z-index: 99;
+    position: relative;
+
 }
 
 nav ul {
@@ -61,7 +64,7 @@ nav ul li {
     margin: 0 20px;
 }
 
-button.btn-2 {
+.btn-2 {
     padding: 20px 23px;
     border: 2px solid #ffffff;
     border-radius: 1000px;
@@ -72,10 +75,11 @@ button.btn-2 {
     text-align: center;
     letter-spacing: 0.01em;
     color: #FFFFFF;
+    text-decoration: none;
 }
 
 .container {
-    width: 85%;
+    max-width: 1320px;
     margin: 0 auto;
 }
 
@@ -85,7 +89,14 @@ button.btn-2 {
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
 
+.bg1-shadow {
+    position: absolute;
+    width: 100%;
 }
 
 .herocontent {
@@ -93,8 +104,11 @@ button.btn-2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 175px 0px;
     height: 100%;
+    position: relative;
+    z-index: inherit;
+    padding-top: 260px;
+    padding-bottom: 275px;
 }
 
 .herocontent h1 {
@@ -104,7 +118,6 @@ button.btn-2 {
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
-    margin-top: 25px;
 }
 
 .herocontent p {
@@ -118,28 +131,32 @@ button.btn-2 {
     margin-bottom: 40px;
 }
 
-.herocontent button {
+.herocontent a {
     padding: 22px 33px;
     border-radius: 1000px;
-    font-family: 'Aventa-SemiBold';
-    font-size: 16px;
+    font-family: 'Aventa-Bold';
+    font-size: 18px;
     line-height: 16px;
     text-align: center;
     letter-spacing: 0.01em;
+    background-color: #fff;
+    text-decoration: none;
+    color: black;
+
 }
 
 .explore-section {
-    /* background-image: url('/bg2.png'); */
+    background-image: url('./assets/Bg-images/bg2.png');
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
-    padding-top: 160px;
+    margin-bottom: -10px;
 }
 
 .explore-content {
     display: flex;
     justify-content: space-between;
-
+    padding-top: 100px;
 }
 
 .explore-content h1 {
@@ -150,77 +167,37 @@ button.btn-2 {
 }
 
 .slider-section {
-    /* background-image: url('./bg3.png'); */
+    background-image: url('./assets/Bg-images/bg3.png');
     background-size: cover;
     padding: 140px 0px;
     background-position: center;
 }
 
 
-/* Style the buttons that are used to open and close the accordion panel */
 
-.accordion {
-    background-color: #1B3C78;
-    color: #ffffff;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
-    display: inline;
-}
-
-.active,
-.accordion:hover {
-    background-color: #b0c3e6;
-}
-
-.accordion:after {
-    content: '\002B';
-    color: #777;
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
-}
-
-.active:after {
-    content: "\2212";
-}
-
-.panel {
-    padding: 0px 40px;
-    background-color: #ffffff;
-    max-height: 80px;
-    overflow: hidden;
-    width: 100%;
-    transition: max-height 0.2s ease-out;
-}
-
-
-.accordianSec {
+.accordionSec {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-top: 55px;
     grid-gap: 66px;
+    padding-bottom: 126px;
 }
 
-
-/* #accordion {
+.explore-img img {
     width: 100%;
-} */
-/* accor style  */
+}
+
 .dl_accordion_item {
-    border-bottom: 1px solid #e5e5e5;
+    border: 1px solid #136DF7;
+    background: none;
 
 }
 
-.dl_accordion_item:last-child {
-    border-bottom: 0px solid transparent;
+.dl_accordion_item.dl_accordion_style_02.is-active .dl_accordion_item_title {
+    background-color: #1B3C78;
 }
+
 
 .dl_accordion_item .dl_accordion_icon {
     position: absolute;
@@ -234,6 +211,7 @@ button.btn-2 {
 
 .dl_accordion_item .dl_accordion_item_title {
     position: relative;
+
 }
 
 .dl_accordion_item .dl_accordion_title {
@@ -245,20 +223,22 @@ button.btn-2 {
     line-height: 28px;
     text-transform: capitalize;
     color: #FFFFFF;
+    padding: 20px 0;
+    padding-left: 30px;
 }
 
 .dl_accordion_item .dl_accordion_title::before {
     content: '';
     display: inline-block;
-    height: 7px;
-    width: 7px;
+    height: 12px;
+    width: 12px;
     vertical-align: middle;
     border-right: 2px solid;
     border-bottom: 2px solid;
     transform: rotate(45deg);
     transition: transform 0.2s ease-out;
-    right: 6px;
-    top: 14%;
+    right: 20px;
+    top: 25px;
     position: absolute;
 }
 
@@ -266,25 +246,25 @@ button.btn-2 {
     display: none;
     padding-top: 30px;
     background-color: rgb(255, 255, 255);
-    font-family: 'Aventa-Medium';
+    font-family: 'Aventa-SemiBold';
     font-size: 19px;
     line-height: 40px;
-    /* or 211% */
+    padding: 20px 40px 20px 30px;
 
     text-transform: capitalize;
-
     color: #09142E
 }
 
 .dl_accordion_item.is-active .dl_accordion_title::before {
-    transform: rotate(-140deg);
+    transform: rotate(-135deg);
+    top: 30px;
 }
 
 .dl_accordion_item.dl_accordion_style_02 {
 
-    border-bottom: 0px solid transparent;
-    background-color: #1B3C78;
-    margin-bottom: 10px;
+
+    background: none;
+    margin-bottom: 26px;
 }
 
 .dl_accordion_item.dl_accordion_style_02 .dl_accordion_panel {
@@ -298,7 +278,7 @@ button.btn-2 {
 .free-section {
     width: 100%;
     padding: 115px 0px;
-    background-image: url('./free-bg.png');
+    background-image: url('./assets/Bg-images/free-bg.png');
 }
 
 .text-container h1 {
@@ -336,6 +316,32 @@ button.btn-2 {
     text-align: center;
 }
 
+.list-item.item1 {
+
+    border-bottom: 10px solid #22D9DF;
+}
+
+.list-item.item2 {
+    border-bottom: 10px solid #FC6B00;
+
+}
+
+.list-item.item3 {
+    border-bottom: 10px solid #136DF7;
+}
+
+.list-item.item4 {
+    border-bottom: 10px solid #FFC701;
+}
+
+.list-item.item5 {
+    border-bottom: 10px solid #2EA964;
+}
+
+.list-item.item6 {
+    border-bottom: 10px solid #FF4601;
+}
+
 .list-icon img {
     width: 110px;
     padding-bottom: 50px;
@@ -371,19 +377,30 @@ button.btn-2 {
 }
 
 .testimonial {
-    padding: 150px 0px;
+    padding-top: 150px;
+    padding-bottom: 300px;
+    position: relative;
+
+}
+
+
+
+.people-shadow {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    z-index: -1;
 }
 
 .content-wrapper {
-    display: inline-grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 30px;
+    display: flex;
+    justify-content: space-between;
 
 }
 
 .testi-wrapper {
     /* margin-left: 155px; */
-    width: 100%;
+    width: 50%;
 }
 
 .testi-wrapper h1 {
@@ -393,6 +410,10 @@ button.btn-2 {
     text-transform: capitalize;
     padding-bottom: 28px;
     color: #FFFFFF;
+}
+
+.slider-items {
+    width: 100%;
 }
 
 .slider-items p {
@@ -433,6 +454,7 @@ button.btn-2 {
     background-color: #136DF7;
     text-indent: -9999px;
     cursor: pointer;
+    margin: 0px 5px;
 }
 
 .testi-slider .slick-dots .slick-active {
@@ -484,7 +506,8 @@ button.btn-2 {
     justify-content: center;
     align-items: center;
     margin: 0;
-    padding: 1rem 0;
+    padding: 0;
+    padding-top: 60px;
     list-style: none;
 }
 
@@ -516,12 +539,14 @@ button.btn-2 {
 
 /* Footer CSS */
 .footer {
-    background-image: url(./footer-bg.png);
+    background-image: url(./assets/Bg-images/footer-bg.png);
     background-position: center;
     background-size: cover;
-    padding-top: 310px;
+
+    z-index: 1;
 
 }
+
 
 .text p {
     font-family: 'Aventa-SemiBold';
@@ -592,19 +617,99 @@ button.btn-2 {
 
 .footer {
     position: relative;
-    overflow: hidden;
+    padding-top: 300px;
 }
 
-.footer .container {
+
+
+.img-shadow img {
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    object-fit: cover;
+    z-index: -2;
+    max-width: 100%;
+}
+
+.subscribe-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #136DF7;
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+    padding: 80px;
+    background-color: #08122E;
+    margin-bottom: -150px;
     z-index: 3;
 }
 
-.img-shadow img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+.sub-text h2 {
+    font-family: 'Aventa-Bold';
+    font-size: 48px;
+    line-height: 58px;
+    color: #FFFFFF;
+    padding-bottom: 16px;
+}
+
+.sub-text p {
+    font-family: 'Aventa-SemiBold';
+    font-size: 16px;
+    line-height: 28px;
+    color: #EBEBEB;
+}
+
+.field-group {
+    width: 464px;
+}
+
+.field-group input {
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    font-family: 'Aventa-SemiBold';
+    font-size: 16px;
+    line-height: 19px;
+    padding: 25px 60px;
+    margin-bottom: 20px;
     width: 100%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    z-index: 1;
+    background: none;
+    border: 1px solid white;
+    color: #FFFFFF;
+}
+
+.field-group ::placeholder {
+    font-family: 'Aventa-SemiBold';
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF !important;
+}
+
+.input-field {
+    position: relative;
+}
+
+.field-group i {
+    position: absolute;
+    color: white;
+    font-size: 22px;
+    top: 25px;
+    left: 22px;
+}
+
+.field-group button {
+
+    background: #136DF7;
+    border-radius: 5px;
+    font-family: 'Aventa-SemiBold';
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    width: 100%;
+    color: #FFFFFF;
+    cursor: pointer;
+    border: none;
+    padding: 25px 0;
 }
