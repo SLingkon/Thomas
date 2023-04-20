@@ -84,7 +84,7 @@ nav ul li {
 }
 
 .herosection {
-    background-image: url('/bg1.png');
+    background-image: url('./assets/Bg-images/bg1.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -279,6 +279,7 @@ nav ul li {
     width: 100%;
     padding: 115px 0px;
     background-image: url('./assets/Bg-images/free-bg.png');
+    background-size: cover;
 }
 
 .text-container h1 {
