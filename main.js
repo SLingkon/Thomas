@@ -1,11 +1,35 @@
 $(document).ready(function () {
+
+
+	$('.navbar-toggler').on('click', function () {
+		$('.offcanvas-wraper, .navbar-toggler').toggleClass('active')
+	})
+
+
 	$('.icons-slider').slick({
 		slidesToShow: 5,
 		slidesToScroll: 4,
 		autoplay: false,
 		dots: true,
 		arrows: false,
+		responsive: [{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 3,
+				slidesToScroll: 1,
+			},
+		},
+		{
+			breakpoint: 445,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+			},
+		},
+		],
 	});
+
+
 });
 
 $(document).ready(function () {
@@ -17,6 +41,8 @@ $(document).ready(function () {
 		arrows: false,
 		autoplaySpeed: 2000,
 	});
+
+
 });
 
 // (Optional) Active an item if it has the class "is-active"

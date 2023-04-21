@@ -24,50 +24,107 @@
 		/>
 
 		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="responsive.css" />
 		<title>Thomas</title>
 	</head>
-	<header>
-		<div class="logo">
-			<img src="./assets/logo.png" alt="" />
+	<header class="header-area">
+		<div class="container">
+			<div class="logo">
+				<a href="index.html"><img src="./assets/logo.png" alt="" /></a>
+			</div>
+			<nav class="nav-items">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Governace</a></li>
+					<li><a href="#">Community</a></li>
+					<li><a href="#">blog</a></li>
+					<li><a href="#">About</a></li>
+				</ul>
+			</nav>
+			<a href="#" class="btn-2">
+				Sign Up Now
+				<svg
+					width="13"
+					height="12"
+					viewBox="0 0 13 12"
+					fill="currentColor"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M2.5 10L10.5 2"
+						stroke="currentColor"
+						stroke-width="1.5"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					/>
+					<path
+						d="M4 2H10.5V8.5"
+						stroke="currentColor"
+						stroke-width="1.5"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					/>
+				</svg>
+			</a>
 		</div>
-		<nav class="nav-items">
-			<ul>
-				<li>Home</li>
-				<li>Governace</li>
-				<li>Community</li>
-				<li>blog</li>
-				<li>About</li>
-			</ul>
-		</nav>
-		<a href="#" class="btn-2">
-			Sign Up Now
-			<svg
-				width="13"
-				height="12"
-				viewBox="0 0 13 12"
-				fill="none"
-				xmlns="http://www.w3.org/2000/svg"
-			>
-				<path
-					d="M2.5 10L10.5 2"
-					stroke="white"
-					stroke-width="1.5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-				/>
-				<path
-					d="M4 2H10.5V8.5"
-					stroke="white"
-					stroke-width="1.5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-				/></svg
-		></a>
 	</header>
+	<div class="mobile-header">
+		<div class="logo">
+			<a href="index.html"><img src="./assets/logo.png" alt="" /></a>
+		</div>
+		<div class="navbar-toggler">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<!-- start offcanvas menu  -->
+	<div class="offcanvas-wraper">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Governace</a></li>
+						<li><a href="#">Community</a></li>
+						<li><a href="#">blog</a></li>
+						<li><a href="#">About</a></li>
+						<li>
+							<a href="#" class="btn-2">
+								Sign Up Now
+								<svg
+									width="13"
+									height="12"
+									viewBox="0 0 13 12"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M2.5 10L10.5 2"
+										stroke="white"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+									<path
+										d="M4 2H10.5V8.5"
+										stroke="white"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 	<body>
 		<section class="herosection">
 			<div class="bg1-shadow">
-				<img src="./assets/Bg-images/bg1_shadow.png" alt="" />
+				<img src="./assets/Bg-images/bg1_shadow.webp" alt="" />
 			</div>
 			<div class="container">
 				<div class="herocontent">
@@ -86,19 +143,19 @@
 							width="12"
 							height="12"
 							viewBox="0 0 12 12"
-							fill="none"
+							fill="currentColor"
 							xmlns="http://www.w3.org/2000/svg"
 						>
 							<path
 								d="M2 10L10 2"
-								stroke="black"
+								stroke="currentColor"
 								stroke-width="1.5"
 								stroke-linecap="round"
 								stroke-linejoin="round"
 							/>
 							<path
 								d="M3.5 2H10V8.5"
-								stroke="black"
+								stroke="currentColor"
 								stroke-width="1.5"
 								stroke-linecap="round"
 								stroke-linejoin="round"
@@ -118,19 +175,19 @@
 							width="13"
 							height="12"
 							viewBox="0 0 13 12"
-							fill="none"
+							fill="currentColor"
 							xmlns="http://www.w3.org/2000/svg"
 						>
 							<path
 								d="M2.5 10L10.5 2"
-								stroke="white"
+								stroke="currentColor"
 								stroke-width="1.5"
 								stroke-linecap="round"
 								stroke-linejoin="round"
 							/>
 							<path
 								d="M4 2H10.5V8.5"
-								stroke="white"
+								stroke="currentColor"
 								stroke-width="1.5"
 								stroke-linecap="round"
 								stroke-linejoin="round"
@@ -474,7 +531,7 @@
 				</div>
 			</div>
 			<div class="img-shadow">
-				<img src="./assets/Bg-images/footer-shadow.png" alt="" />
+				<img src="./assets/Bg-images/footer-shadow.webp" alt="" />
 			</div>
 		</footer>
 	</body>
